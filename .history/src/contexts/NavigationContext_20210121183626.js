@@ -7,7 +7,7 @@ export const NavigationStore = ({ children }) => {
 
   const onActiveChange = () => {
     setIsActive(!isActive);
-    //console.log('active' + isActive);
+    console.log('active' + isActive);
     document.body.classList.toggle('nav-active');
   };
 

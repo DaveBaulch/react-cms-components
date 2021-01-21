@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 const Context = React.createContext();
 
-export const NavigationStore = ({ children }) => {
+export NavigationStore = ({ children }) => {
   const [isActive, setIsActive] = useState(false);
 
   const onActiveChange = () => {

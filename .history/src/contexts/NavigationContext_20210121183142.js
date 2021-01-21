@@ -2,15 +2,18 @@ import React, { useState } from 'react';
 
 const Context = React.createContext();
 
-export const NavigationStore = ({ children }) => {
+export const NavigationStore = () => {
   const [isActive, setIsActive] = useState(false);
+  //state = { isActive: false };
 
   const onActiveChange = () => {
+    //this.setState({ isActive: !this.state.isActive });
     setIsActive(!isActive);
-    //console.log('active' + isActive);
+    console.log('active' + isActive);
     document.body.classList.toggle('nav-active');
   };
 
+  //render() {
   return (
     <Context.Provider
       value={{
@@ -18,9 +21,10 @@ export const NavigationStore = ({ children }) => {
         onActiveChange: onActiveChange
       }}
     >
-      {children}
+      { children }
     </Context.Provider>
   );
+  //}
 };
 
 export default Context;

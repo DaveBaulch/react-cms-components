@@ -7,10 +7,9 @@ export const NavigationStore = ({ children }) => {
 
   const onActiveChange = () => {
     setIsActive(!isActive);
-    //console.log('active' + isActive);
+    console.log('active' + isActive);
     document.body.classList.toggle('nav-active');
   };
-
   return (
     <Context.Provider
       value={{
@@ -21,6 +20,7 @@ export const NavigationStore = ({ children }) => {
       {children}
     </Context.Provider>
   );
+  //}
 };
 
 export default Context;
